@@ -1,66 +1,54 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+Selamat datang di dokumentasi aplikasi menajemen tugas ini, disini berisi tentang dokumentasi api dan cara menjaankan aplikasi ini
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
-## About Laravel
+**REST API for Task Management**
+API ini meliputi autentikasi feature dan CRUD untuk task management
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+**APi Authentication**
+API ini akan meliputi endpoint untuk authentikasi penggunakan menggunakan JSON Web Token (JWT).
+Endpoint: /api/auth/login
+Method: POST
+Deskripsi: Autentikasi user dan generate JWT Token untuk bisa akses endpoint lain
+Endpoint: /api/auth/logout
+Method: POST
+Deskripsi: Invalidate token yang dimiliki user sehingga usert terlogout.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**APi Task Management (CRUD)**
+API ini akan menyediakan endpoint untuk melakukan CRUD untuk Task
+Endpoint: /api/tasks
+Method: GET
+Deskripsi: Mendapatkan list task yang dibuat oleh user yang login
+Endpoint: /api/tasks/{id}
+Method: GET
+Deskripsi: Mendapatkan detail task berdasarkan id
+Endpoint: /api/tasks
+Method: POST
+Deskripsi: Membuat task baru dan dapat diassignkan ke user lain
+Endpoint: /api/tasks/{id}
+Method: PUT
+Deskripsi: Update task berdasarkan id
+Endpoint: /api/tasks/{id}
+Method: DELETE
+Deskripsi: Hapus task yang sudah pernah dibuat
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+ Development Stack
+Aplikasi ini di develop menggunakan teknologi seperti:
+Laravel (v9)
+Inertia.js
+Vue.js
+Tailwind CSS
 
-## Learning Laravel
+**CARA MENJALANKAN APLIKASI INI**
+Kami sudah menyediakan repository yang bisa digunakan:
+1. Clone repository nya dari sini
+ //github.com/Hanifdeveloper123/aplikasi-task-manajemen/
+2. Copy **`.env.example`** ke **`.env`** dan setup konfigurasi yang di perlukan (seperti database)
+3. Jalankan perintah dibawah ini, lalu boilerplate sudah siap digunakan:
+    - **`composer install`**
+    - **`yarn`**
+    - **`php artisan migrate`**
+    - **`php artisan db:seed`**
+    - **`yarn dev`**
+   Tinggal jaankan aplikasi tersebut
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+**Aplikasi Ini Dibuat pada Rabu 15 November 2023 dan selesai pada Selasa 5 Desember 2023**
